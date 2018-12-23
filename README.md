@@ -8,14 +8,14 @@
 5. generate things that can be used by the wider OS community and not just OpenEMR
 
 ## Current Directory Structure (very likely will change):
-config-files:
+`config-files/`
   - things like `apache2.conf`, `openemr.conf`, etc will go here.
 
-docker-images:
+`docker-images/`
   - `00_whole-docker/` - only for testing, everything in one dockerfile, 
   - `01_separate-dockers/` - multiple Dockerfiles that each build their own image
  
-helper-scripts:
+`helper-scripts/`
   - any needed shell scripts 
   
 ## Current Work Happening:
