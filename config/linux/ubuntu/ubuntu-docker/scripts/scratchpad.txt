@@ -1,0 +1,62 @@
+
+
+https://github.com/trick77/ipset-blacklist/blob/master/ipset-blacklist.conf
+
+#download github stuff
+wget -O /usr/local/sbin/update-blacklist.sh https://raw.githubusercontent.com/trick77/ipset-blacklist/master/update-blacklist.sh \
+  && wget -O /usr/local/sbin/update-blacklist.sh https://raw.githubusercontent.com/trick77/ipset-blacklist/master/update-blacklist.sh \
+  && mkdir -p /etc/ipset-blacklist ; wget -O /etc/ipset-blacklist/ipset-blacklist.conf https://raw.githubusercontent.com/trick77/ipset-blacklist/master/ipset-blacklist.conf
+
+
+https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/cleantalk_updated.ipset
+apt-get install ipset
+
+#create the list
+/usr/local/sbin/update-blacklist.sh /etc/ipset-blacklist/ipset-blacklist.conf
+
+#add to iptables
+ipset restore < /etc/ipset-blacklist/ip-blacklist.restore \
+ && iptables -I INPUT 1 -m set --match-set blacklist src -j DROP
+
+#CRON 33 23 * * *      root /usr/local/sbin/update-blacklist.sh /etc/ipset-blacklist/ipset-blacklist.conf
+
+
+
+apt-get install
+pip install netaddr
+
+
+
+
+```
+from netaddr import *
+import sys
+import fileinput
+import re
+iplist = []
+
+for line in fileinput.input(sys.argv[1]):
+  ipv4_address = re.compile('(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\/(3[0-2]|[1-2][0-9]|[0-9]))')
+  ipv4 = re.search(ipv4_address, line)
+  if ipv4:
+    iplist.append(ipv4.group(0))
+
+ip_merge_list=cidr_merge(iplist)
+for ip in ip_merge_list:
+  print ip
+```
+
+```
+input='personal-blacklist-custom.txt'
+IPT=iptables
+$IPT -N droplist
+while IFS= read -r ip
+do
+        $IPT -A droplist -i eth1 -s $ip -j LOG --log-prefix " myBad IP BlockList  "
+        $IPT -A droplist -i eth1 -s $ip -j DROP
+done < "$_input"
+# Drop it
+$IPT -I INPUT -j droplist
+$IPT -I OUTPUT -j droplist
+$IPT -I FORWARD -j droplist
+```
