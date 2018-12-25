@@ -1,0 +1,6 @@
+1. have a single virtual host file so you can put rewrites and MaxMind in?
+2. somehow recreate GeoIP.conf
+3. create the cron scripts you need in cron-scripts and then do the timing thing
+4. Get modsecurity to work jesus
+5. modevasive
+6 determine if you want to use IPSET
