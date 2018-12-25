@@ -60,3 +60,17 @@ $IPT -I INPUT -j droplist
 $IPT -I OUTPUT -j droplist
 $IPT -I FORWARD -j droplist
 ```
+
+
+'''
+RewriteEngine On
+RewriteMap deny_ips txt:/path/to/deny_ips.txt
+
+RewriteCond ${deny_ips:%{REMOTE_ADDR}|0} !=0
+RewriteRule ^ - [L,F]
+
+
+or maybe
+RewriteMap deny_ips dbm:/path/to/deny_ips.dbm
+
+git clone https://github.com/stamparm/ipsum.git

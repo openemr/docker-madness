@@ -1,13 +1,22 @@
-FROM ubuntu:18.04
+FROM launcher.gcr.io/google/debian9:latest
+
 ARG DEBIAN_FRONTEND=noninteractive
 
 ######
 ###### Install Prerequisites ######
 ######
 
-RUN apt-get update && apt install apt-transport-https git software-properties-common -y
-RUN add-apt-repository ppa:maxmind/ppa
-RUN apt-get --no-install-recommends -y install \
+RUN apt update && apt install -y apt-transport-https git ca-certificates software-properties-common wget sudo gnupg
+
+RUN rm -f /etc/apt/sources.list \
+  && echo "deb https://deb.debian.org/debian stretch main" > /etc/apt/sources.list \
+  && echo "deb https://deb.debian.org/debian stretch-updates main" >> /etc/apt/sources.list \
+  && echo "deb https://deb.debian.org/debian-security stretch/updates main" >> /etc/apt/sources.list
+
+RUN wget -q https://packages.sury.org/php/apt.gpg -O- |  apt-key add - \
+  && echo "deb https://packages.sury.org/php/ stretch main" | tee /etc/apt/sources.list.d/php.list
+
+RUN apt-get update && apt --no-install-recommends -y install \
     libtool \
     dh-autoreconf \
     pkgconf \
@@ -20,14 +29,12 @@ RUN apt-get --no-install-recommends -y install \
     liblmdb-dev \
     ssdeep \
     lua5.2-dev \
-    ufw \
     iputils-ping \
     net-tools \
     python-pip \
-    python3.6 \
-    python2.7 \
-     php7.2 npm apache2-dev apache2  php7.2-bcmath libmaxminddb0 \
-     libmaxminddb-dev mmdb-bin wget geoipupdate build-essential \
+    python3 \
+     php7.2 apache2-dev apache2  php7.2-bcmath libmaxminddb0 \
+     libmaxminddb-dev mmdb-bin wget build-essential \
      libapache2-mod-evasive php7.2-bz2 php7.2-cli php7.2-common \
      php7.2-curl php7.2-dba php7.2-enchant php7.2-fpm php7.2-gd php7.2-gmp php7.2-imap \
      php7.2-interbase php7.2-intl php7.2-json php7.2-ldap php7.2-mbstring php7.2-mysql php7.2-odbc php7.2-opcache \
@@ -37,3 +44,8 @@ RUN apt-get --no-install-recommends -y install \
      && apt autoremove \
      && apt-get autoclean \
      && rm -rf /var/lib/apt/lists/*
+
+#software-properties-common for adding repos not needed
+#geoipupdate removed
+#wget added for php stuff as well as gnupg
+#sudo might need it later

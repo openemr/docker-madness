@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="21cb1a5c-babf-4d78-882f-bd071d1afab6" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper-files/config-files/apache/openemr.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="94">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper-files/helper-scripts/cronjobs.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper-files/helper-scripts/debian9.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="53" column="50" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/helper-files/config-files/apache/apache2.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1901" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper-files/helper-scripts/iptables-blacklist.sh">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper-files/user-config/country-blocking-setup.sh">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-images/01_separate-dockers/02_part-secure/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="52" selection-start-line="52" selection-end-line="54" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-images/01_separate-dockers/03_part-emr/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-images/01_separate-dockers/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ubun</find>
+      <find>ubuntu1</find>
+      <find>#</find>
+      <find>RUN</find>
+      <find>ufw</find>
+      <find>recur</find>
+      <find>a2</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/config-files/sources.list" />
+        <option value="$PROJECT_DIR$/helper-files/helper-scripts/ubuntu1804.sh" />
+        <option value="$PROJECT_DIR$/docker-images/01_separate-dockers/02_part-emr/Dockerfile" />
+        <option value="$PROJECT_DIR$/docker-images/01_separate-dockers/01_part-pre/Dockerfile" />
+        <option value="$PROJECT_DIR$/helper-files/config-files/sources.list" />
+        <option value="$PROJECT_DIR$/docker-images/01_separate-dockers/03_part-secure/Dockerfile" />
+        <option value="$PROJECT_DIR$/docker-images/00_whole-docker/Dockerfile" />
+        <option value="$PROJECT_DIR$/helper-files/helper-scripts/scratchpad.txt" />
+        <option value="$PROJECT_DIR$/helper-files/config-files/apache/openemr.conf" />
+        <option value="$PROJECT_DIR$/docker-images/01_separate-dockers/Dockerfile" />
+        <option value="$PROJECT_DIR$/helper-files/helper-scripts/debian9.sh" />
+        <option value="$PROJECT_DIR$/docker-images/01_separate-dockers/02_part-secure/Dockerfile" />
+        <option value="$PROJECT_DIR$/helper-files/helper-scripts/cronjobs.sh" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="67" />
+    <option name="y" value="27" />
+    <option name="width" value="927" />
+    <option name="height" value="1053" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="docker-madness" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-madness" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="docker-madness" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-madness" type="462c0819:PsiDirectoryNode" />
+              <item name="docker-images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="docker-madness" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-madness" type="462c0819:PsiDirectoryNode" />
+              <item name="docker-images" type="462c0819:PsiDirectoryNode" />
+              <item name="00_whole-docker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="docker-madness" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-madness" type="462c0819:PsiDirectoryNode" />
+              <item name="docker-images" type="462c0819:PsiDirectoryNode" />
+              <item name="01_separate-dockers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="docker-madness" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-madness" type="462c0819:PsiDirectoryNode" />
+              <item name="docker-images" type="462c0819:PsiDirectoryNode" />
+              <item name="01_separate-dockers" type="462c0819:PsiDirectoryNode" />
+              <item name="01_part-base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="docker-madness" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-madness" type="462c0819:PsiDirectoryNode" />
+              <item name="docker-images" type="462c0819:PsiDirectoryNode" />
+              <item name="01_separate-dockers" type="462c0819:PsiDirectoryNode" />
+              <item name="02_part-secure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="docker-madness" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-madness" type="462c0819:PsiDirectoryNode" />
+              <item name="docker-images" type="462c0819:PsiDirectoryNode" />
+              <item name="01_separate-dockers" type="462c0819:PsiDirectoryNode" />
+              <item name="03_part-emr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="docker-madness" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-madness" type="462c0819:PsiDirectoryNode" />
+              <item name="helper-files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="docker-madness" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-madness" type="462c0819:PsiDirectoryNode" />
+              <item name="helper-files" type="462c0819:PsiDirectoryNode" />
+              <item name="config-files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="docker-madness" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-madness" type="462c0819:PsiDirectoryNode" />
+              <item name="helper-files" type="462c0819:PsiDirectoryNode" />
+              <item name="config-files" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="docker-madness" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-madness" type="462c0819:PsiDirectoryNode" />
+              <item name="helper-files" type="462c0819:PsiDirectoryNode" />
+              <item name="helper-scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/helper-files/user-config" />
+      <recent name="$PROJECT_DIR$/helper-files" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docker-images/01_separate-dockers" />
+      <recent name="$PROJECT_DIR$/config-files" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="01_part-pre/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker-images/01_separate-dockers/01_part-pre/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21cb1a5c-babf-4d78-882f-bd071d1afab6" name="Default Changelist" comment="" />
+      <created>1545691126498</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545691126498</updated>
+      <workItem from="1545691129805" duration="17012000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="17012000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24958494" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.4997233" visible="true" weight="0.58868337" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.5002767" side_tool="true" visible="true" weight="0.58868337" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/helper-files/config-files/geoip.conf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper-files/helper-scripts/ubuntu1804.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper-files/config-files/sources.list">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-images/01_separate-dockers/02_part-emr/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-images/01_separate-dockers/01_part-pre/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-images/01_separate-dockers/03_part-secure/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-images/00_whole-docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper-files/config-files/apache/security.conf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper-files/helper-scripts/scratchpad.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper-files/helper-scripts/draft.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper-files/helper-scripts/iptables-blacklist.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper-files/user-config/country-blocking-setup.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-images/01_separate-dockers/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper-files/config-files/apache/openemr.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-images/01_separate-dockers/03_part-emr/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper-files/helper-scripts/debian9.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="53" column="50" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper-files/config-files/apache/apache2.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1901" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-images/01_separate-dockers/02_part-secure/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="52" selection-start-line="52" selection-end-line="54" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper-files/helper-scripts/cronjobs.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper-files/helper-scripts/kickoff.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>
