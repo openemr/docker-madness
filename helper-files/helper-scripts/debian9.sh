@@ -37,11 +37,15 @@ openssl req -x509 -newkey rsa:4096 \
 
 ### Apache Config Files
 #@todo take care of this in the secure-docker file since these apply to more than just OpenEMR
+
+git clone https://github.com/openemr/docker-madness /root/docker-madness
+
 rm -rf /var/www/html
 rm -rf /etc/apache2/mods-available/evasive.conf
 rm -f /etc/apache2/apache2.conf
 rm -f /etc/apache2/conf-enabled/security.conf
 rm -f /etc/apache2/sites-enabled/000-default.conf
+
 
 cp /root/docker-madness/helper-files/config-files/apache/evasive.conf /etc/apache2/mods-available/evasive.conf
 cp /root/docker-madness/helper-files/config-files/apache/apache2.conf /etc/apache2/
@@ -71,12 +75,12 @@ find gacl/admin/templates_c -type d -print0 | xargs -0 chmod 700
 ### Script Removal
 echo "Removing remaining setup scripts"
 #remove all setup scripts
-rm -f admin.php
-rm -f acl_setup.php
-rm -f acl_upgrade.php
-rm -f setup.php
-rm -f sql_patch.php
-rm -f sql_upgrade.php
-rm -f ippf_upgrade.php
-rm -f gacl/setup.php
+#rm -f admin.php
+#rm -f acl_setup.php
+#rm -f acl_upgrade.php
+#rm -f setup.php
+#rm -f sql_patch.php
+#rm -f sql_upgrade.php
+#rm -f ippf_upgrade.php
+#rm -f gacl/setup.php
 echo "Setup scripts removed, we should be ready to go now!"
