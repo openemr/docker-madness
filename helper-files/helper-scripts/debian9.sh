@@ -9,6 +9,7 @@ cd /openemr
 composer install
 npm install --unsafe-perm
 npm run build
+#@todo don't run compose as superuser
 composer global require phing/phing
 composer global require phing/phing 
 #/root/.composer/vendor/bin/phing vendor-clean \
@@ -42,7 +43,7 @@ rm -f /etc/apache2/apache2.conf
 rm -f /etc/apache2/conf-enabled/security.conf
 rm -f /etc/apache2/sites-enabled/000-default.conf
 
-cp /root/docker-madness/helper-files/config-files/apache/evasive.conf /etc/apache2/mods-avaiable/evasive.conf
+cp /root/docker-madness/helper-files/config-files/apache/evasive.conf /etc/apache2/mods-available/evasive.conf
 cp /root/docker-madness/helper-files/config-files/apache/apache2.conf /etc/apache2/
 cp /root/docker-madness/helper-files/config-files/apache/openemr.conf /etc/apache2/sites-enabled
 #@todo probably eliminate security.conf and just put in main apache2.conf???
@@ -50,7 +51,7 @@ cp /root/docker-madness/helper-files/config-files/apache/security.conf /etc/apac
 cp /root/docker-madness/helper-files/config-files/GeoIP.conf /usr/local/etc/
 
 ### Load Apache Modules
-#ln -s /etc/apache2/mods-available/socache_smcb.load /etc/apache2/mods-avaibled/socache_smcb.load 
+#ln -s /etc/apache2/mods-available/socache_smcb.load /etc/apache2/mods-available/socache_smcb.load
 #ln -s /etc/apache2/mods-available/ssl.conf /etc/apache2/mods-enabled/ssl.conf
 #ln -s ssl.load /etc/apache2/mods-available/ssl.load /etc/apache2/mods-enabled/ssl.load
 #ln -s /etc/apache2/mods-available/rewrite.conf /etc/apache2/mods-enabled/rewrite.conf
