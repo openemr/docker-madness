@@ -4,7 +4,7 @@
 ######
 
 ### Composer and NPM Install
-git clone https://github.com/danehrlich1/openemr
+git clone https://github.com/openemr/openemr
 cd /openemr
 composer install
 npm install --unsafe-perm
@@ -39,10 +39,9 @@ rm -f /etc/apache2/apache2.conf
 rm -f /etc/apache2/conf-enabled/security.conf
 rm -f /etc/apache2/sites-enabled/000-default.conf
 
-cd /root
-git clone https://github.com/openemr/docker-madness
 cp /root/docker-madness/helper-files/config-files/apache/apache2.conf /etc/apache2/
 cp /root/docker-madness/helper-files/config-files/apache/openemr.conf /etc/apache2/sites-enabled
+#@todo probably eliminate security.conf and just put in main apache2.conf???
 cp /root/docker-madness/helper-files/config-files/apache/security.conf /etc/apache2/conf-enabled
 cp /root/docker-madness/helper-files/config-files/GeoIP.conf /usr/local/etc/
 
@@ -51,6 +50,7 @@ cp /root/docker-madness/helper-files/config-files/GeoIP.conf /usr/local/etc/
 #ln -s /etc/apache2/mods-available/ssl.conf /etc/apache2/mods-enabled/ssl.conf
 #ln -s ssl.load /etc/apache2/mods-available/ssl.load /etc/apache2/mods-enabled/ssl.load
 #ln -s /etc/apache2/mods-available/rewrite.conf /etc/apache2/mods-enabled/rewrite.conf
+#@todo think this command is already in dockerfile 2
 a2enmod ssl rewrite evasive headers proxy allowmethods
 
 ### More File Permissions
@@ -66,15 +66,14 @@ find interface/main/calendar/modules/PostCalendar/pntemplates/compiled -type d -
 find gacl/admin/templates_c -type d -print0 | xargs -0 chmod 700
 
 ### Script Removal
-#echo "Removing remaining setup scripts"
+echo "Removing remaining setup scripts"
 #remove all setup scripts
-#rm -f admin.php
-#rm -f acl_setup.php
-#rm -f acl_upgrade.php
-#rm -f setup.php
-#rm -f sql_patch.php
-#rm -f sql_upgrade.php
-#rm -f ippf_upgrade.php
-#rm -f gacl/setup.php
-#echo "Setup scripts removed, we should be ready to go now!"
-#rm -rf /var/www/config/linux
+rm -f admin.php
+rm -f acl_setup.php
+rm -f acl_upgrade.php
+rm -f setup.php
+rm -f sql_patch.php
+rm -f sql_upgrade.php
+rm -f ippf_upgrade.php
+rm -f gacl/setup.php
+echo "Setup scripts removed, we should be ready to go now!"

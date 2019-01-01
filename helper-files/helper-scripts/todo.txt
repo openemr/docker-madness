@@ -1,6 +1,19 @@
-1. have a single virtual host file so you can put rewrites and MaxMind in?
-2. somehow recreate GeoIP.conf
-3. create the cron scripts you need in cron-scripts and then do the timing thing
+1. have a single virtual host file so you can put rewrites and MaxMind in? - research
+2. somehow recreate GeoIP.conf - DONE
+3. create the cron scripts you need in cron-scripts and then do the timing thing - DONE
 4. Get modsecurity to work jesus
 5. modevasive
-6 determine if you want to use IPSET
+6. determine if you want to use IPSET
+
+
+7. Apache file permissions!
+
+8. Really go through that debian9.sh script...anything else?
+
+9. Align to CIS Benchmark
+
+10. Close out issues of stuff you've done on Github - DONE
+
+11. Secure SSH feature of docker??
+
+currently storing images locally at local/gcp/openemr-secure/base | secure | emr

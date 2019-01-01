@@ -33,6 +33,7 @@ RUN apt-get update && apt --no-install-recommends -y install \
     net-tools \
     python-pip \
     python3 \
+    libapache2-mod-security2 \
      php7.2 apache2-dev apache2  php7.2-bcmath libmaxminddb0 \
      libmaxminddb-dev mmdb-bin wget build-essential \
      libapache2-mod-evasive php7.2-bz2 php7.2-cli php7.2-common \
