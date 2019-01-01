@@ -35,10 +35,12 @@ openssl req -x509 -newkey rsa:4096 \
 
 ### Apache Config Files
 rm -rf /var/www/html
+rm -rf /etc/apache2/mods-available/evasive.conf
 rm -f /etc/apache2/apache2.conf
 rm -f /etc/apache2/conf-enabled/security.conf
 rm -f /etc/apache2/sites-enabled/000-default.conf
 
+cp /root/docker-madness/helper-files/config-files/apache/evasive.conf /etc/apache2/mods-avaiable/evasive.conf
 cp /root/docker-madness/helper-files/config-files/apache/apache2.conf /etc/apache2/
 cp /root/docker-madness/helper-files/config-files/apache/openemr.conf /etc/apache2/sites-enabled
 #@todo probably eliminate security.conf and just put in main apache2.conf???
