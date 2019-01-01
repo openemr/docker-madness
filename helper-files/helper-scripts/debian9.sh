@@ -26,7 +26,8 @@ chmod 666 /var/www/openemr/interface/modules/zend_modules/config/application.con
 
 ### SSL
 #git clone https://github.com/letsencrypt/letsencrypt /opt/certbot 
-#pip install -e /opt/certbot/acme -e /opt/certbot 
+#pip install -e /opt/certbot/acme -e /opt/certbot
+#@todo consider taking care of in main-docker
 openssl req -x509 -newkey rsa:4096 \
 -keyout /etc/ssl/private/selfsigned.key.pem \
 -out /etc/ssl/certs/selfsigned.cert.pem \
@@ -34,6 +35,7 @@ openssl req -x509 -newkey rsa:4096 \
 -subj "/C=xx/ST=x/L=x/O=x/OU=x/CN=localhost"
 
 ### Apache Config Files
+#@todo take care of this in the secure-docker file since these apply to more than just OpenEMR
 rm -rf /var/www/html
 rm -rf /etc/apache2/mods-available/evasive.conf
 rm -f /etc/apache2/apache2.conf
@@ -52,8 +54,6 @@ cp /root/docker-madness/helper-files/config-files/GeoIP.conf /usr/local/etc/
 #ln -s /etc/apache2/mods-available/ssl.conf /etc/apache2/mods-enabled/ssl.conf
 #ln -s ssl.load /etc/apache2/mods-available/ssl.load /etc/apache2/mods-enabled/ssl.load
 #ln -s /etc/apache2/mods-available/rewrite.conf /etc/apache2/mods-enabled/rewrite.conf
-#@todo think this command is already in dockerfile 2
-a2enmod ssl rewrite evasive headers proxy allowmethods
 
 ### More File Permissions
 echo "Default file permissions and ownership set, allowing writing to specific directories"

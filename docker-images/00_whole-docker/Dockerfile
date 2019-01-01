@@ -57,12 +57,13 @@ RUN a2enmod ssl rewrite evasive headers proxy allowmethods socache_dbm security2
 ### Clone Config Files
 RUN cd /root \
   && git clone https://github.com/openemr/docker-madness
-@
+
 ### Cron Jobs
 #@todo download this all from a separate secure-server-general repo
 RUN chmod 770 /root/docker-madness/helper-files/helper-scripts/cron-scripts/*.sh \
   && mv /root/docker-madness/helper-files/helper-scripts/cron-scripts/*.sh /etc/cron.daily \
-  && rm -rf docker-madness
+    && cd /root \
+    && rm -rf docker-madness
 
 ### Set up ModSecurity CRS OWASP Rules
 # Download new rules
@@ -90,7 +91,6 @@ RUN wget https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.ta
   && make -i install
 
 ### ModEvasive
-#@todo
 
 ### IP Blacklisting
 RUN wget https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt \
@@ -110,4 +110,3 @@ RUN chmod 770 /root/docker-madness/helper-files/helper-scripts/debian9.sh && ./r
 
 RUN service apache2 start
 EXPOSE 80 443
-

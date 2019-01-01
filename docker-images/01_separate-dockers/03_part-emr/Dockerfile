@@ -5,6 +5,6 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN cd /root && git clone https://github.com/openemr/docker-madness
 RUN chmod 770 /root/docker-madness/helper-files/helper-scripts/debian9.sh && ./root/docker-madness/helper-files/helper-scripts/debian9.sh
-
+#@todo disable uneeded apache modules?
 RUN service apache2 start
 EXPOSE 80 443
