@@ -57,7 +57,7 @@ RUN a2enmod ssl rewrite evasive headers proxy allowmethods socache_dbm security2
 ### Clone Config Files
 RUN cd /root \
   && git clone https://github.com/openemr/docker-madness
-
+@
 ### Cron Jobs
 #@todo download this all from a separate secure-server-general repo
 RUN chmod 770 /root/docker-madness/helper-files/helper-scripts/cron-scripts/*.sh \
