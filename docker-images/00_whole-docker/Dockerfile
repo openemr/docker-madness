@@ -34,8 +34,8 @@ RUN apt-get update && apt --no-install-recommends -y install \
     python-pip \
     python3 \
     libapache2-mod-security2 \
-     php7.2 apache2-dev apache2  php7.2-bcmath libmaxminddb0 \
-     libmaxminddb-dev mmdb-bin wget build-essential \
+     php7.2 apache2-dev apache2  php7.2-bcmath \
+     wget build-essential \
      libapache2-mod-evasive php7.2-bz2 php7.2-cli php7.2-common \
      php7.2-curl php7.2-dba php7.2-enchant php7.2-fpm php7.2-gd php7.2-gmp php7.2-imap \
      php7.2-interbase php7.2-intl php7.2-json php7.2-ldap php7.2-mbstring php7.2-mysql php7.2-odbc php7.2-opcache \
@@ -79,17 +79,6 @@ RUN sed -i '/load/ i   IncludeOptional /usr/share/modsecurity-crs/*.conf' /etc/a
 RUN sed -i 's/setvar:tx.paranoia_level=1/setvar:tx.paranoia_level=2/g' /usr/share/modsecurity-crs/crs-setup.conf \
   && sed -i 's/SecRuleEngine DetectionOnly/SecRuleEngine On/g' /etc/modsecurity/modsecurity.conf
 
-### MAXMIND
-# Edit apache.conf to allow maxmind and set <if> block
-RUN wget https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz \
-  && tar -xvf GeoLite2-Country* && mkdir /usr/local/share/GeoIP \
-  && mv GeoLite2-Country*/GeoLite2-Country.mmdb /usr/local/share/GeoIP \
-  && wget https://github.com/maxmind/mod_maxminddb/releases/download/1.1.0/mod_maxminddb-1.1.0.tar.gz \
-  && tar -xvf mod_maxminddb-1.1.0.tar.gz \
-  && cd mod_maxminddb-1.1.0 \
-  && ./configure \
-  && make -i install
-
 ### ModEvasive
 
 ### IP Blacklisting
@@ -100,6 +89,9 @@ RUN wget https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt \
 RUN rm -f /etc/apache/ipsum.dbm \
   && mv ipsum.dbm /etc/apache2/ipsum.dbm
 
+### Postfix
+
+###  DNS?
 
 ######
 ###### Install OpenEMR ######
@@ -108,5 +100,5 @@ RUN rm -f /etc/apache/ipsum.dbm \
 RUN cd /root && git clone https://github.com/openemr/docker-madness
 RUN chmod 770 /root/docker-madness/helper-files/helper-scripts/debian9.sh && ./root/docker-madness/helper-files/helper-scripts/debian9.sh
 
-RUN service apache2 start
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80 443

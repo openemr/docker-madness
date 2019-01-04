@@ -6,6 +6,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ###### Security ######
 ######
 
+
 ### Apache Mods
 RUN a2enmod ssl rewrite evasive headers proxy allowmethods socache_dbm security2
 
@@ -13,7 +14,6 @@ RUN a2enmod ssl rewrite evasive headers proxy allowmethods socache_dbm security2
 RUN cd /root \
   && git clone https://github.com/openemr/docker-madness \
 #@todo config files for apache later should be adjusted here
-
 
 ### Cron Jobs
 #@todo download this all from a separate secure-server-general repo
@@ -36,17 +36,7 @@ RUN sed -i '/load/ i   IncludeOptional /usr/share/modsecurity-crs/*.conf' /etc/a
 RUN sed -i 's/setvar:tx.paranoia_level=1/setvar:tx.paranoia_level=2/g' /usr/share/modsecurity-crs/crs-setup.conf \
   && sed -i 's/SecRuleEngine DetectionOnly/SecRuleEngine On/g' /etc/modsecurity/modsecurity.conf
 
-### MAXMIND
-# Edit apache.conf to allow maxmind and set <if> block
-RUN wget https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz \
-  && tar -xvf GeoLite2-Country* && mkdir /usr/local/share/GeoIP \
-  && mv GeoLite2-Country*/GeoLite2-Country.mmdb /usr/local/share/GeoIP \
-  && wget https://github.com/maxmind/mod_maxminddb/releases/download/1.1.0/mod_maxminddb-1.1.0.tar.gz \
-  && tar -xvf mod_maxminddb-1.1.0.tar.gz \
-  && cd mod_maxminddb-1.1.0 \
-  && ./configure \
-  && make -i install
-
+#@todo turn off this rule 920350
 ### IP Blacklisting
 RUN wget https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt \
   && httxt2dbm -i ipsum.txt -o ipsum.dbm \
@@ -55,6 +45,12 @@ RUN wget https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt \
 RUN rm -f /etc/apache/ipsum.dbm \
   && mv ipsum.dbm /etc/apache2/ipsum.dbm
 
+### ModEvasive
+
+### Postfix Dovecot and SASL
+
+### DNS?
+
 ### Start Server
-RUN service apache2 start
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80 443
